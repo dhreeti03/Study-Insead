@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class myclass3 {
-   // static WebElement element;
+	// static WebElement element;
 	WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
@@ -28,19 +28,19 @@ public class myclass3 {
 		login.click();
 		Thread.sleep(2000);
 
-		
 		WebElement email = driver.findElement(By.cssSelector("input[type='text']"));
 		email.sendKeys("dhreeti.shah@insead.edutest");
-		Thread.sleep(1000); 
-
-	/*	WebElement email1 = driver.findElement(By.cssSelector("input[type='text']"));
-		email1.sendKeys("thilina.fonseka@insead.edutest");
 		Thread.sleep(1000);
-		
-		WebElement pass = driver.findElement(By.cssSelector("input[type='password']"));
-		pass.sendKeys("insead2018"); */
 
-		
+		/*
+		 * WebElement email1 = driver.findElement(By.cssSelector("input[type='text']"));
+		 * email1.sendKeys("thilina.fonseka@insead.edutest"); Thread.sleep(1000);
+		 * 
+		 * WebElement pass =
+		 * driver.findElement(By.cssSelector("input[type='password']"));
+		 * pass.sendKeys("insead2018");
+		 */
+
 		WebElement pass1 = driver.findElement(By.cssSelector("input[type='password']"));
 		pass1.sendKeys("insead2019");
 
@@ -48,24 +48,29 @@ public class myclass3 {
 
 		Thread.sleep(6000);
 
+		// WebElement button =
+		// driver.findElement(By.className("course_selection--list"));
+		// button.click();
 
- //  WebElement button =  driver.findElement(By.className("course_selection--list"));
-  // button.click();
-	
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	//js.executeScript("window.scrollBy(0,1000)", "");
-		
-	WebElement scroll = driver.findElement(By.className("welcome--copy"));
-	js.executeScript("arguments[0].scrollIntoView(true);",scroll);
-	
-	
-	
-	
-	Thread.sleep(7000);
-	
-	driver.findElement(By.xpath("//a[@href='/app/2083/tasks']")).click();
-	
-	driver.findElement(By.className("main-path")).click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// js.executeScript("window.scrollBy(0,1000)", "");
+
+		WebElement scroll = driver.findElement(By.className("welcome--copy"));
+		js.executeScript("arguments[0].scrollIntoView(true);", scroll);
+
+		Thread.sleep(7000);
+
+		driver.findElement(By.xpath("//a[@href='/app/2083/tasks']")).click();
+		Thread.sleep(2000);
+
+		WebElement selected = driver.findElement(By.cssSelector("button[type= 'button']"));
+		selected.click();
+
+//WebElement selected2 = driver.findElement(By.cssSelector("button[class='Check_list--togle_all']"));
+//selected2.click();
+
+		// driver.findElement(By.id("ember429")).click();
+		Thread.sleep(7000);
 		System.out.println("Test complete");
 		driver.close();
 
