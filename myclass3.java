@@ -64,9 +64,8 @@ public class myclass3 {
 	Thread.sleep(7000);
 	
 	driver.findElement(By.xpath("//a[@href='/app/2083/tasks']")).click();
-	//driver.findElement(By.className("welcome--control")).click();
-		//driver.findElement(By.id("ember432")).click();
-		Thread.sleep(7000);
+	
+	driver.findElement(By.className("main-path")).click();
 		System.out.println("Test complete");
 		driver.close();
 
